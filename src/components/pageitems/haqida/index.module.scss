@@ -1,0 +1,130 @@
+@import url(../../../style/index.scss);
+
+.haqida {
+  background: #282828;
+  padding: 4vw 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+  .alone {
+    display: none;
+  }
+  .f1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3vw;
+    img {
+      width: 38vw;
+      height: 25vw;
+    }
+    .txtgrp {
+      display: flex;
+      flex-direction: column;
+      .ttl {
+        color: #fff;
+        font-family: "Inter";
+        font-size: 4vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: 0.5vw;
+        text-transform: lowercase;
+      }
+      .txt {
+        color: rgba(255, 255, 255, 0.8);
+        font-family: "Inter";
+        font-size: 1vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 25.2px */
+        letter-spacing: 0.1vw;
+        width: 40vw;
+      }
+    }
+  }
+  .f2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+    img {
+      width: 35vw;
+      height: 23vw;
+    }
+    .txtgrp {
+      .txt {
+        color: rgba(255, 255, 255, 0.8);
+        font-family: "Inter";
+        font-size: 1vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 170%; /* 25.2px */
+        letter-spacing: 0.1vw;
+        word-spacing: 3px;
+        width: 40vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .haqida {
+    .alone {
+      display: flex;
+      justify-content: center;
+      gap: 5vw;
+      img {
+        width: 40vw;
+        height: 26vw;
+      }
+    }
+    .f1 {
+      text-align: center;
+      img {
+        display: none;
+      }
+      .txtgrp {
+        .txt {
+          width: 100%;
+          margin: auto;
+          font-size: 2vw;
+        }
+      }
+    }
+    .f2 {
+      text-align: center;
+      img {
+        display: none;
+      }
+      .txtgrp {
+        .txt {
+          width: 100%;
+          margin: auto;
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:450px){
+ .haqida{
+    .f1{
+        .txtgrp{
+            .txt{
+                font-size: 3vw;
+            }
+        }
+    }
+    .f2{
+        .txtgrp{
+            .txt{
+                font-size: 3vw;
+            }
+        }
+    }
+ }   
+}

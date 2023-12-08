@@ -1,0 +1,96 @@
+@import url(../../../style/index.scss);
+
+.rasm {
+  background: #282828;
+  padding: 2vw 4vw 0 4vw;
+  .ttl {
+    color: #fff;
+    font-family: "Inter";
+    text-align: center;
+    font-size: 3.8vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 78.4px */
+    letter-spacing: 0.08vw;
+  }
+  .grp {
+    padding: 3vw 0;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    .grp1 {
+      display: flex;
+      flex-direction: column;
+      gap: 3vw;
+      img {
+        width: 25vw;
+      }
+    }
+    .grp1:nth-child(1) {
+        img:nth-child(4){
+            display: none;
+        }
+      img:nth-child(1),
+      img:nth-child(3) {
+        height: 18vw;
+      }
+      img:nth-child(2) {
+        height: 25vw;
+      }
+    }
+    .grp1:nth-child(2) {
+      img:nth-child(2),
+      img:nth-child(3) {
+        height: 18vw;
+      }
+      img:nth-child(1) {
+        height: 25vw;
+      }
+    }
+    .grp1:nth-child(3) {
+      img:nth-child(1),
+      img:nth-child(2) {
+        height: 18vw;
+      }
+      img:nth-child(3) {
+        height: 25vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .rasm {
+    .grp {
+        flex-wrap: wrap;
+      .grp1:nth-child(1) {
+        img:nth-child(2),
+        img:nth-child(1) {
+          display: none;
+        }
+        img:nth-child(3) {
+          height: 120px;
+          width: 150px;
+        }
+        img:nth-child(4) {
+            display: flex;
+            height: 120px;
+            width: 150px;
+          }
+      }
+      .grp1:nth-child(2) {
+        img:nth-child(2),
+        img:nth-child(3) {
+            height: 120px;
+            width: 150px;
+        }
+        img:nth-child(1) {
+          display: none;
+        }
+      }
+      .grp1:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
