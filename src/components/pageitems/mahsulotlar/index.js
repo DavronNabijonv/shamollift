@@ -11,7 +11,7 @@ export default function Mahsulotlar() {
                 <div className={styles.mgrp}>
                     <img src={r.img} />
                     <p>{r.ttl}</p>
-                    <button onClick={()=>{}}></button>
+                    <button>Подробное</button>
                 </div>
             ))}
         </div>
