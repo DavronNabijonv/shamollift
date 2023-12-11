@@ -1,20 +1,24 @@
-import React, { useContext } from 'react'
-import styles from './index.module.scss'
-import { mahsulot } from '../../db/mahsulotlar'
+// Mahsulotlar.js
+import React from "react";
+import styles from "./index.module.scss";
+import { mahsulot } from "../../db/mahsulotlar";
+import { NavLink } from "react-router-dom";
 
 export default function Mahsulotlar() {
   return (
     <div className={styles.mahsulot}>
-        <p className={styles.mttl}>Наша продукция</p>
-        <div className={styles.mbody}>
-            {mahsulot.map((r)=>(
-                <div className={styles.mgrp}>
-                    <img src={r.img} />
-                    <p>{r.ttl}</p>
-                    <button>Подробное</button>
-                </div>
-            ))}
-        </div>
+      <p className={styles.mttl}>Наша продукция</p>
+      <div className={styles.mbody}>
+        {mahsulot.map((r) => (
+          <div className={styles.mgrp} key={r.id}>
+            <img src={r.img} alt={r.ttl} />
+            <p>{r.ttl}</p>
+            <NavLink to={`/info/${r.id}`}>
+              <button>Подробное</button>
+            </NavLink>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }

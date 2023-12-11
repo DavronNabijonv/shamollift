@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Asosiy from "../components/pageitems/asosiy";
 import Haqida from "../components/pageitems/haqida";
 import Mahsulotlar from "../components/pageitems/mahsulotlar";
@@ -7,9 +7,23 @@ import Tarmoq from "../components/pageitems/tarmoqlar";
 import Rasmlar from "../components/pageitems/rasmlar";
 import Aloqa from "../components/pageitems/aloqa";
 import Footer from "./footer";
-import Navbar from './navbar'
+import Navbar from "./navbar";
+import MahsulotlarSwiper from "../components/swiper";
 
 export default function Deploy() {
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
       <Navbar />
@@ -20,7 +34,7 @@ export default function Deploy() {
         <Haqida />
       </div>
       <div id="mahsulot">
-        <Mahsulotlar />
+        {innerWidth<600? <MahsulotlarSwiper/> :<Mahsulotlar />}
       </div>
       <div id="xizmat">
         <Xizmatlar />
