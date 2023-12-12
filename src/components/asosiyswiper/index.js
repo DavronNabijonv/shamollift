@@ -24,6 +24,7 @@ export default function AsosiySwiper() {
         spaceBetween={0}
         centeredSlides={true}
         pagination={false}
+        loop={true}
         autoplay={{
             delay: 2500,
             disableOnInteraction: false,
