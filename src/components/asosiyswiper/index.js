@@ -13,9 +13,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import "./styles.scss";
 import mainpage from "../../assets/images/mainpage.png";
 import a2 from "../../assets/images/deco1.png";
-import a1 from "../../assets/images/a2.jpg";
 import a3 from "../../assets/images/deco3.png";
-import a4 from "../../assets/images/a4.jpg";
 
 export default function AsosiySwiper() {
   return (

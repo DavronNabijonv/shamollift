@@ -1,11 +1,16 @@
 // Main.js
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./index.module.scss";
 import { mahsulot } from "../../../db/mahsulotlar";
 import { useParams } from "react-router-dom";
 
 function Main() {
   const { itemIndex } = useParams();
+
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, [itemIndex]);
 
   return (
     <div className={styles.main}>

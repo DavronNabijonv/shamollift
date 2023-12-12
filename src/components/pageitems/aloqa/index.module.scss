@@ -118,6 +118,13 @@
             height: 1vw;
           }
         }
+        .btn:hover{
+          background: none;
+          color: #fff;
+          svg{
+            color: #fff;
+          }
+        }
       }
     }
     .f2 {

@@ -1,5 +1,16 @@
 @import url(../../../style/index.scss);
 
+@keyframes opac {
+  from {
+    opacity: 0.5;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 .rasm {
   background: #282828;
   padding: 2vw 4vw 0 4vw;
@@ -49,6 +60,11 @@
       gap: 3vw;
       img {
         width: 25vw;
+        animation: opac 1.5s 1s linear;
+        animation-timeline: scroll();
+      }
+      img:hover {
+        transform: perspective(1000px) rotateX(5deg) rotateY(-20deg) scale(1);
       }
     }
     .grp1:nth-child(1) {
@@ -95,7 +111,7 @@
 
 @media (max-width: 500px) {
   .rasm {
-    button{
+    button {
       display: flex;
     }
     .ttl {
@@ -112,6 +128,8 @@
         img {
           height: 36vw;
           width: 44.5vw;
+          animation: opac 1.5s 1s linear;
+          animation-timeline: scroll();
         }
       }
       .one:nth-child(1) {

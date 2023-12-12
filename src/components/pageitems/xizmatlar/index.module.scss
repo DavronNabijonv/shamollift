@@ -23,6 +23,7 @@
     justify-content: center;
     gap: 1vw;
     .grp {
+      transition: all 0.3s ease-in;
       display: flex;
       width: 25vw;
       padding: 1vw;
@@ -55,44 +56,8 @@
         letter-spacing: 0.05vw;
       }
     }
-  }
-}
-
-@media (max-width: 600px) {
-  .xizmat {
-    .xttl {
-      font-size: 6vw;
-      padding: 0 0 8vw 0;
-    }
-    .xbody {
-      gap: 6vw;
-      .grp {
-        width: 70vw;
-        padding: 4vw 3vw;
-        svg {
-          width: 8vw;
-          height: 8vw;
-        }
-        .gttl{
-          font-size: 4vw;
-          padding-bottom: 2.5vw;
-        }
-        .gtxt{
-          font-size: 4vw;
-        }
-      }
-      .grp:nth-child(4){
-        display: none;
-      }
-      .grp:nth-child(3){
-        display: none;
-      }
-      .grp:nth-child(5){
-        display: none;
-      }
-      .grp:nth-child(6){
-        display: none;
-      }
+    .grp:hover{
+      margin-top: -1.5vw;
     }
   }
 }
