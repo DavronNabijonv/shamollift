@@ -17,6 +17,7 @@ export default function Haqida() {
             создания лифта лежат технологии высочайшего уровня, благодаря чему
             меняется восприятие лифтав целом».
           </p>
+          <img src={deco1} />
           <p className={styles.txt}>
             Мы компания Shamollift, предоставляющая нашим клиентам самое
             передовое лифтовое оборудование и полный спектр услуг от
@@ -26,7 +27,6 @@ export default function Haqida() {
         </div>
       </div>
       <div className={styles.alone}>
-        <img src={deco1} />
         <img src={deco3} />
       </div>
       <div className={styles.f2}>

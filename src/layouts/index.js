@@ -9,6 +9,8 @@ import Aloqa from "../components/pageitems/aloqa";
 import Footer from "./footer";
 import Navbar from "./navbar";
 import MahsulotlarSwiper from "../components/swiper";
+import XizmatSwiper from "../components/xizmatswiper";
+import AsosiySwiper from "../components/asosiyswiper";
 
 export default function Deploy() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -28,7 +30,8 @@ export default function Deploy() {
     <div>
       <Navbar />
       <div id="asosiy">
-        <Asosiy />
+        {/* <Asosiy /> */}
+        <AsosiySwiper/>
       </div>
       <div id="haqida">
         <Haqida />
@@ -37,7 +40,7 @@ export default function Deploy() {
         {innerWidth<600? <MahsulotlarSwiper/> :<Mahsulotlar />}
       </div>
       <div id="xizmat">
-        <Xizmatlar />
+        {innerWidth<600? <XizmatSwiper /> : <Xizmatlar />}
       </div>
       <Tarmoq />
       <Rasmlar />
