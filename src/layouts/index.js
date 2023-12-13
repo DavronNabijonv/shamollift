@@ -28,26 +28,26 @@ export default function Deploy() {
   }, []);
   return (
     <div>
-      <Navbar />
+      <Navbar asosiy="#asosiy" haqida="#haqida" mahsulot="#mahsulot" xizmat="#xizmat" aloqa="#aloqa" />
       <div id="asosiy">
         {/* <Asosiy /> */}
-        <AsosiySwiper/>
+        <AsosiySwiper />
       </div>
       <div id="haqida">
         <Haqida />
       </div>
       <div id="mahsulot">
-        {innerWidth<600? <MahsulotlarSwiper/> :<Mahsulotlar />}
+        {innerWidth < 600 ? <MahsulotlarSwiper /> : <Mahsulotlar />}
       </div>
       <div id="xizmat">
-        {innerWidth<600? <XizmatSwiper /> : <Xizmatlar />}
+        {innerWidth < 600 ? <XizmatSwiper /> : <Xizmatlar />}
       </div>
       <Tarmoq />
       <Rasmlar />
       <div id="aloqa">
         <Aloqa />
       </div>
-      <Footer />
+      <Footer haqida="#haqida" mahsulot="#mahsulot" xizmat="#xizmat" />
     </div>
   );
 }
