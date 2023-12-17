@@ -11,6 +11,7 @@ import Navbar from "./navbar";
 import MahsulotlarSwiper from "../components/swiper";
 import XizmatSwiper from "../components/xizmatswiper";
 import AsosiySwiper from "../components/asosiyswiper";
+import LoadPart from "../components/loadPart";
 
 export default function Deploy() {
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -26,6 +27,11 @@ export default function Deploy() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  
+  if (window.onload) {
+    return <LoadPart />;
+  }
+
   return (
     <div>
       <Navbar asosiy="#asosiy" haqida="#haqida" mahsulot="#mahsulot" xizmat="#xizmat" aloqa="#aloqa" />
