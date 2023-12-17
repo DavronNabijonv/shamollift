@@ -27,13 +27,14 @@ export default function Deploy() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
+
   if (window.onload) {
     return <LoadPart />;
   }
 
   return (
     <div>
+      <LoadPart/>
       <Navbar asosiy="#asosiy" haqida="#haqida" mahsulot="#mahsulot" xizmat="#xizmat" aloqa="#aloqa" />
       <div id="asosiy">
         {/* <Asosiy /> */}
